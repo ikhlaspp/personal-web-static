@@ -1,0 +1,20 @@
+# Ignore config files with sensitive data
+config.js
+.env
+.env.local
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# Vercel
+.vercel
