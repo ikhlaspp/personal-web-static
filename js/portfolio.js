@@ -226,10 +226,11 @@ function openPortfolioModal(index) {
         `<span class="modal-tech-tag">${tech}</span>`
     ).join('');
     
-    // Set project link
-    if (project.url) {
+    // Set project link - hide button if URL is empty, null, or invalid
+    if (project.url && project.url.trim() !== '' && project.url !== '#') {
         modalLink.href = project.url;
         modalLink.style.display = 'inline-flex';
+        modalLink.classList.remove('disabled');
     } else {
         modalLink.style.display = 'none';
     }
